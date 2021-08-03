@@ -1,27 +1,27 @@
 {% set name = "icdiff" %}
-{% set version = "1.9.1" %}
+{% set version = "2.0.3" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 66972dd03318da55280991db375d3ef6b66d948c67af96c1ebdb21587e86655e
+  sha256: 230fc488b9e434127a97193672303b0d7ae75c5e362530ebcdf6d7f534b2444a
 
 build:
   noarch: python
   number: 0
   entry_points:
     - icdiff=icdiff:start
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv "
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv '
 
 requirements:
   host:
     - pip
-    - python
+    - python >=3.4
   run:
-    - python
+    - python >=3.4
 
 test:
   commands:
@@ -32,10 +32,10 @@ test:
 
 about:
   home: http://www.jefftk.com/icdiff
-  license: Python 2.6.2
+  license: Python-2.0
   license_family: OTHER
   # https://github.com/jeffkaufman/icdiff/issues/137
-  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE'
+  license_file: {{ environ["RECIPE_DIR"] }}/LICENSE
   summary: improved colored diff
 
 extra:
