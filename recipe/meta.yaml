@@ -19,9 +19,9 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.4
   run:
-    - python
+    - python >=3.4
 
 test:
   commands:
@@ -32,7 +32,7 @@ test:
 
 about:
   home: http://www.jefftk.com/icdiff
-  license: Python 2.6.2
+  license: Python-2.0
   license_family: OTHER
   # https://github.com/jeffkaufman/icdiff/issues/137
   license_file: {{ environ["RECIPE_DIR"] }}/LICENSE
