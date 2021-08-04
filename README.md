@@ -3,7 +3,7 @@ About icdiff
 
 Home: http://www.jefftk.com/icdiff
 
-Package license: Python 2.6.2
+Package license: Python-2.0
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/icdiff-feedstock/blob/master/LICENSE.txt)
 
