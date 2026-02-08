@@ -14,7 +14,7 @@ build:
   number: 0
   entry_points:
     - icdiff=icdiff:start
-  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv '
+  script: '{{ PYTHON }} -m pip install . --no-deps -vvv '
 
 requirements:
   host:
@@ -34,7 +34,7 @@ test:
     - icdiff
 
 about:
-  home: http://www.jefftk.com/icdiff
+  home: https://github.com/jeffkaufman/icdiff
   license: Python-2.0
   license_family: OTHER
   license_file: LICENSE
