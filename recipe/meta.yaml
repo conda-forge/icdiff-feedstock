@@ -1,5 +1,5 @@
 {% set name = "icdiff" %}
-{% set version = "2.0.7" %}
+{% set version = "2.0.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f79a318891adbf59a45e3a7694f5e1f18c5407065264637072ac8363b759866f
+  sha256: 75a3de5c9af35ab45fb0504df59770c514a12c0d2b2c99e5f9c5c2429957e133
 
 build:
   noarch: python
-  number: 1
+  number: 0
   entry_points:
     - icdiff=icdiff:start
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv '
